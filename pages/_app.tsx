@@ -54,7 +54,7 @@ const provider = ({ chainId }: WagmiProps) =>
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider autoConnect provider={provider} connectors={connectors}>
+    <Provider autoConnect connectors={connectors}>
       <Component {...pageProps} />
     </Provider>
   );

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+  @apply font-mono text-xs  tracking-wide  lg:text-sm;
+}
+
+@font-face {
+  src: url(/fonts/SpaceMono-Rg.ttf);
+  font-weight: 500;
+  font-family: "space";
+}

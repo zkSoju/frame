@@ -1,9 +1,11 @@
 import "../styles/globals.css";
+import "../styles/tailwind.css";
 import { Provider, chain, defaultChains } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
 import { WalletLinkConnector } from "wagmi/connectors/walletLink";
 import { providers } from "ethers";
+import { AnimatePresence } from "framer-motion";
 
 // API key for Ethereum node
 // Two popular services are Infura (infura.io) and Alchemy (alchemy.com)
@@ -55,7 +57,9 @@ const provider = ({ chainId }: WagmiProps) =>
 function MyApp({ Component, pageProps }) {
   return (
     <Provider autoConnect connectors={connectors}>
-      <Component {...pageProps} />
+      <AnimatePresence>
+        <Component {...pageProps} />
+      </AnimatePresence>
     </Provider>
   );
 }

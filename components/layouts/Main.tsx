@@ -13,8 +13,8 @@ const Main = ({ children }) => {
         <title>Wagmi Starter</title>
       </Head>
       <NextSeo
-        title="Wagmi Starter"
-        description="Wagmi"
+        title="Wagmi Boilerplate"
+        description="Wagmi Boiler"
         openGraph={{
           url: "https://xxx.xxx/",
           title: "Wagmi",

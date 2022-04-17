@@ -16,7 +16,7 @@ const Main = ({ children }) => {
         title="Wagmi Boilerplate"
         description="Wagmi Boiler"
         openGraph={{
-          url: "https://xxx.xxx/",
+          url: "",
           title: "Wagmi",
           description: "Wagmi",
         }}

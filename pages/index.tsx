@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Main from "../components/layouts/Main";
 import { FaGithub } from "react-icons/fa";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { ConnectKitButton } from "connectkit";
 
 export default function Home() {
   return (
     <Main>
       <div className="fixed z-50 flex w-full justify-end px-8 pt-10">
-        <ConnectButton />
+        <ConnectKitButton />
       </div>
       <div className="relative z-10 flex h-screen w-full items-center justify-center">
         <div className="flex flex-col items-start px-4 py-4">

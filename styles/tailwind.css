@@ -7,13 +7,13 @@ p {
 }
 
 @font-face {
-  src: url(/fonts/Buckin-Rg.otf);
+  src: url(/Buckin-Rg.otf);
   font-weight: 400;
   font-family: "buckin";
 }
 
 @font-face {
-  src: url(/fonts/Buckin-Bd.otf);
+  src: url(/Buckin-Bd.otf);
   font-weight: 700;
   font-family: "buckin";
 }

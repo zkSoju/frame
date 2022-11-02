@@ -8,12 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.1",
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.39",
     "connectkit": "^0.0.1",
     "eslint-config-next": "^13.0.1",
     "ethers": "^5.6.9",
     "framer-motion": "^6.2.8",
+    "graphql": "^16.6.0",
     "immer": "^9.0.12",
     "next": "^13.0.1",
     "next-seo": "^5.1.0",

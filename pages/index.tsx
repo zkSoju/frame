@@ -30,7 +30,7 @@ export default function Home() {
             >
               <div className="flex flex-row items-center space-x-2">
                 <FaGithub />
-                <p>Github ⋅ zkSoju</p>
+                <p>Use this template</p>
               </div>
             </a>
           </div>

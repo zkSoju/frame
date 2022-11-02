@@ -12,9 +12,8 @@ export default function Home() {
         <div className="absolute h-screen w-full">
           <Image
             src="/bg.png"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-75"
+            fill
+            className="object-cover opacity-75"
             alt=""
           />
         </div>

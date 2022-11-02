@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
+import { ConnectKitButton } from "connectkit";
+import Navbar from "../Navbar";
 
 const Main = ({ children }) => {
   const router = useRouter();

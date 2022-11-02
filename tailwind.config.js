@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: "Buckin",
+        wagmi: "Gilroy",
       },
     },
   },

@@ -14,6 +14,10 @@ cd wagmi-boiler
 yarn install
 ```
 
+This repo uses the experimental AppDir feature on NextJs 13, here are some resources to familiarize yourself:
+- [Example codebase](https://github.com/shadcn/taxonomy)
+- [NextJs13 beta docs](https://beta.nextjs.org/docs)
+
 # Built on
 
 - [framer-motion](https://www.framer.com/motion/)

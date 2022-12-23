@@ -7,25 +7,25 @@ p {
 }
 
 @font-face {
-  src: url(/Gilroy-Thin.ttf);
+  src: url("../public/Gilroy-Thin.ttf");
   font-weight: 100;
   font-family: "Gilroy";
 }
 
 @font-face {
-  src: url(/Gilroy-Regular.ttf);
+  src: url("../public/Gilroy-Regular.ttf");
   font-weight: 400;
   font-family: "Gilroy";
 }
 
 @font-face {
-  src: url(/Gilroy-Medium.ttf);
+  src: url("../public/Gilroy-Medium.ttf");
   font-weight: 500;
   font-family: "Gilroy";
 }
 
 @font-face {
-  src: url(/Gilroy-Bold.ttf);
+  src: url("../public/Gilroy-Bold.ttf");
   font-weight: 700;
   font-family: "Gilroy";
 }

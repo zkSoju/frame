@@ -29,3 +29,4 @@ This repo uses the experimental AppDir feature on NextJs 13, here are some resou
 - [tailwindcss](https://tailwindcss.com/)
 - [zustand](https://github.com/pmndrs/zustand)
 - [immer](https://github.com/immerjs/immer)
+- rainbowkit

@@ -19,5 +19,4 @@ const useUserStore = create<StoreState>(
   )
 );
 
-export const useAddress = useUserStore((state) => state.address);
-export const useSetAddress = useUserStore((state) => state.setAddress);
+export default useUserStore;

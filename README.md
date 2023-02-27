@@ -10,7 +10,7 @@ Slightly Opinionated Next.js Web3 Boilerplate.
 2. Install dependencies.
 
 ```
-cd wagmi-boiler
+cd frame
 yarn install
 ```
 

@@ -15,6 +15,7 @@ yarn install
 ```
 
 This repo uses the experimental AppDir feature on NextJs 13, here are some resources to familiarize yourself:
+
 - [Example codebase](https://github.com/shadcn/taxonomy)
 - [NextJs13 beta docs](https://beta.nextjs.org/docs)
 
@@ -29,4 +30,5 @@ This repo uses the experimental AppDir feature on NextJs 13, here are some resou
 - [tailwindcss](https://tailwindcss.com/)
 - [zustand](https://github.com/pmndrs/zustand)
 - [immer](https://github.com/immerjs/immer)
-- rainbowkit
+- [rainbowkit](https://www.rainbowkit.com/docs/introduction)
+- [tailwind-merge](https://github.com/dcastil/tailwind-merge)

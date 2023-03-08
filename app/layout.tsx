@@ -4,7 +4,6 @@
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
 import { configureChains, createClient, goerli, WagmiConfig } from "wagmi";
-import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import "../styles/globals.css";
 import "../styles/tailwind.css";
@@ -18,9 +17,9 @@ export default function RootLayout({
   const { chains, provider } = configureChains(
     [goerli],
     [
-      alchemyProvider({
-        apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY ?? "",
-      }),
+      // alchemyProvider({
+      //   apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY ?? "",
+      // }),
       publicProvider(),
     ]
   );

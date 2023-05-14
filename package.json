@@ -29,7 +29,7 @@
     "zustand": "^4.3.2"
   },
   "devDependencies": {
-    "@wagmi/cli": "^0.1.11",
+    "@wagmi/cli": "^1.0.1",
     "autoprefixer": "^10.4.4",
     "encoding": "^0.1.13",
     "eslint": "^8.32.0",

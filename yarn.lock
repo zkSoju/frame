@@ -1189,19 +1189,13 @@
   resolved "https://registry.yarnpkg.com/@wagmi/chains/-/chains-0.2.22.tgz#25e511e134a00742e4fbf5108613dadf876c5bd9"
   integrity sha512-TdiOzJT6TO1JrztRNjTA5Quz+UmQlbvWFG8N41u9tta0boHA1JCAzGGvU6KuIcOmJfRJkKOUIt67wlbopCpVHg==
 
-"@wagmi/chains@0.2.9":
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/@wagmi/chains/-/chains-0.2.9.tgz#3dba5fbeb3a2a5c9253bbedce3ede8c84bd809cb"
-  integrity sha512-z0Nv7Cto+t/47NtC8td7khMSWX0zKVCnm8gkgrRs9PHvN+4W7XZfUVQYfhIfkbelT/ONN9V1OA+ho122gmRr3Q==
-
-"@wagmi/cli@^0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@wagmi/cli/-/cli-0.1.11.tgz#320391b0c92181129fe15acc8aea475adc2b9336"
-  integrity sha512-JW4WWLgTwXWwRqU+hrWiRDXFNCV18WI5vbMa2KZgtI+jqBlPJYivHUpmwejnOrXSlfbow9wAFuuCA00foxd3RQ==
+"@wagmi/cli@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@wagmi/cli/-/cli-1.0.1.tgz#f705648c71c7b19e028d5a5a1a74c1c15496c9c8"
+  integrity sha512-SZwT7RglyVDipDTPL/dEKfrAJ3GdSKfdhaF6CFoseIgSiOLkj3xbakvAqdjYSkYnnpjrqLXc3WKZCnszQryctA==
   dependencies:
-    "@ethersproject/address" "^5.7.0"
-    "@wagmi/chains" "0.2.9"
-    abitype "^0.3.0"
+    "@wagmi/chains" "0.2.22"
+    abitype "0.8.1"
     abort-controller "^3.0.0"
     bundle-require "^3.1.2"
     cac "^6.7.12"
@@ -1221,7 +1215,8 @@
     pathe "^1.0.0"
     picocolors "^1.0.0"
     prettier "^2.8.1"
-    zod "^3.20.2"
+    viem "~0.3.18"
+    zod "^3.21.4"
 
 "@wagmi/connectors@1.0.2":
   version "1.0.2"
@@ -1674,11 +1669,6 @@ abitype@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/abitype/-/abitype-0.8.2.tgz#cacd330d07488a4020d84f54fc361361234b9c83"
   integrity sha512-B1ViNMGpfx/qjVQi0RTc2HEFHuR9uoCoTEkwELT5Y7pBPtBbctYijz9BK6+Kd0hQ3S70FhYTO2dWWk0QNUEXMA==
-
-abitype@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/abitype/-/abitype-0.3.0.tgz#75150e337d88cc0b2423ed0d3fc36935f139d04c"
-  integrity sha512-0YokyAV4hKMcy97Pl+6QgZBlBdZJN2llslOs7kiFY+cu7kMlVXDBpxMExfv0krzBCQt2t7hNovpQ3y/zvEm18A==
 
 abort-controller@^3.0.0:
   version "3.0.0"
@@ -5551,7 +5541,7 @@ valtio@1.10.5:
     proxy-compare "2.5.1"
     use-sync-external-store "1.2.0"
 
-viem@^0.3.20:
+viem@^0.3.20, viem@~0.3.18:
   version "0.3.20"
   resolved "https://registry.yarnpkg.com/viem/-/viem-0.3.20.tgz#cfba48a8e361f8bef3dc05f3412ca004245265c5"
   integrity sha512-M3eDCEqepHyz8KwimDFArXerJbTDdF8K/cgzhPJtYQtagr2ddflnlHyEXJZC4ETqg5J110isG4x3zloLRxxkcA==
@@ -5744,10 +5734,10 @@ zen-observable@0.8.15:
   resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.15.tgz#96415c512d8e3ffd920afd3889604e30b9eaac15"
   integrity sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==
 
-zod@^3.20.2:
-  version "3.20.2"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.20.2.tgz#068606642c8f51b3333981f91c0a8ab37dfc2807"
-  integrity sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==
+zod@^3.21.4:
+  version "3.21.4"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
+  integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==
 
 zustand@^4.3.1:
   version "4.3.6"

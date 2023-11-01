@@ -24,7 +24,8 @@ export default function RootLayout({
   );
 
   const { connectors } = getDefaultWallets({
-    appName: "Saint",
+    appName: "Wagmi",
+    projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID!,
     chains,
   });
 

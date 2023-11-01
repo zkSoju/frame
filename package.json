@@ -22,7 +22,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.3.1",
     "tailwind-merge": "^1.10.0",
-    "typescript": "^4.9.3",
+    "typescript": "latest",
     "viem": "latest",
     "wagmi": "latest",
     "zustand": "latest"

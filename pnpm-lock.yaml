@@ -70,7 +70,7 @@ devDependencies:
     specifier: ^0.1.13
     version: 0.1.13
   eslint:
-    specifier: latest
+    specifier: ^8.56.0
     version: 8.56.0
   eslint-plugin-tailwindcss:
     specifier: ^3.8.0

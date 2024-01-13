@@ -1,37 +1,25 @@
 "use client";
 
-import { RainbowKitProvider, getDefaultWallets } from "@rainbow-me/rainbowkit";
-import { WagmiConfig, configureChains, createConfig, mainnet } from "wagmi";
-import { alchemyProvider } from "wagmi/providers/alchemy";
-import { publicProvider } from "wagmi/providers/public";
+import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { WagmiProvider } from "wagmi";
+import { mainnet, sepolia } from "wagmi/chains";
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
-  const { chains, publicClient } = configureChains(
-    [mainnet],
-    [
-      alchemyProvider({
-        apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY ?? "",
-      }),
-      publicProvider(),
-    ]
-  );
-
-  const { connectors } = getDefaultWallets({
-    appName: "Wagmi",
+  const config = getDefaultConfig({
+    appName: "My RainbowKit App",
     projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID ?? "",
-    chains,
+    chains: [mainnet, sepolia],
   });
 
-  const config = createConfig({
-    autoConnect: true,
-    publicClient,
-    connectors,
-  });
+  const queryClient = new QueryClient();
 
   return (
-    <WagmiConfig config={config}>
-      <RainbowKitProvider chains={chains}>{children}</RainbowKitProvider>
-    </WagmiConfig>
+    <WagmiProvider config={config}>
+      <QueryClientProvider client={queryClient}>
+        <RainbowKitProvider>{children}</RainbowKitProvider>
+      </QueryClientProvider>
+    </WagmiProvider>
   );
 };
 

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-head-element */
 
-import Navbar from "@/app/navbar";
+import Navbar from "@/components/navbar";
 import { Web3Provider } from "@/components/web3-provider";
 import { Metadata } from "next";
 import "../styles/globals.css";

@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-head-element */
 
-import Wrapper from "@/components/wrapper";
 import "@rainbow-me/rainbowkit/styles.css";
 import { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/tailwind.css";
-import Navbar from "./Navbar";
+import Navbar from "@/app/Navbar";
+import { Web3Provider } from "@/components/web3-provider";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(""),
@@ -35,12 +35,12 @@ export default function RootLayout({
     <html>
       <head></head>
       <body>
-        <Wrapper>
+        <Web3Provider>
           <div className="mx-auto">
             <Navbar />
             {children}
           </div>
-        </Wrapper>
+        </Web3Provider>
       </body>
     </html>
   );

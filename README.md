@@ -11,7 +11,8 @@ Slightly Opinionated Next.js Web3 Boilerplate.
 
 ```
 cd frame
-yarn install
+pnpm install
+pnpm dev
 ```
 
 This repo uses the experimental AppDir feature on NextJs 13, here are some resources to familiarize yourself:

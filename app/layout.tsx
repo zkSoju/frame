@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-head-element */
 
-import "@rainbow-me/rainbowkit/styles.css";
+import Navbar from "@/app/navbar";
+import { Web3Provider } from "@/components/web3-provider";
 import { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/tailwind.css";
-import Navbar from "@/app/navbar";
-import { Web3Provider } from "@/components/web3-provider";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(""),

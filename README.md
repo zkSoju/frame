@@ -8,17 +8,13 @@ Slightly Opinionated Next.js Web3 Boilerplate.
 
 1. Click use this template or deploy with Vercel above.
 2. Install dependencies.
+3. Create a .env file with the following contents from .env.example
 
 ```
 cd frame
 pnpm install
 pnpm dev
 ```
-
-This repo uses the experimental AppDir feature on NextJs 13, here are some resources to familiarize yourself:
-
-- [Example codebase](https://github.com/shadcn/taxonomy)
-- [NextJs13 beta docs](https://beta.nextjs.org/docs)
 
 # Built on
 

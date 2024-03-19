@@ -14,11 +14,9 @@ export const Web3Provider = ({ children }: { children: React.ReactNode }) => {
       appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID!}
       config={privyConfig}
     >
-      <WagmiProvider config={wagmiConfig}>
-        <QueryClientProvider client={queryClient}>
-          {children}
-        </QueryClientProvider>
-      </WagmiProvider>
+      <QueryClientProvider client={queryClient}>
+        <WagmiProvider config={wagmiConfig}>{children}</WagmiProvider>
+      </QueryClientProvider>
     </PrivyProvider>
   );
 };

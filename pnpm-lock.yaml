@@ -22,9 +22,6 @@ dependencies:
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
-  connectkit:
-    specifier: 1.7.0-demo
-    version: 1.7.0-demo(@babel/core@7.23.7)(@tanstack/react-query@5.17.10)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(viem@2.0.6)(wagmi@2.2.0)
   eslint-config-next:
     specifier: ^14.0.4
     version: 14.0.4(eslint@8.56.0)(typescript@5.1.6)
@@ -2282,17 +2279,6 @@ packages:
       '@motionone/types': 10.17.0
       '@motionone/utils': 10.17.0
       tslib: 2.6.2
-
-  /@motionone/dom@10.12.0:
-    resolution: {integrity: sha512-UdPTtLMAktHiqV0atOczNYyDd/d8Cf5fFsd1tua03PqTwwCe/6lwhLSQ8a7TbnQ5SN0gm44N1slBfj+ORIhrqw==}
-    dependencies:
-      '@motionone/animation': 10.17.0
-      '@motionone/generators': 10.17.0
-      '@motionone/types': 10.17.0
-      '@motionone/utils': 10.17.0
-      hey-listen: 1.0.8
-      tslib: 2.6.2
-    dev: false
 
   /@motionone/dom@10.17.0:
     resolution: {integrity: sha512-cMm33swRlCX/qOPHWGbIlCl0K9Uwi6X5RiL8Ma6OrlJ/TP7Q+Np5GE4xcZkFptysFjMTi4zcZzpnNQGQ5D6M0Q==}
@@ -4978,34 +4964,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /connectkit@1.7.0-demo(@babel/core@7.23.7)(@tanstack/react-query@5.17.10)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(viem@2.0.6)(wagmi@2.2.0):
-    resolution: {integrity: sha512-XS95V6zp4qdvnsozeJNuQN3RJJmQPFGx7x7pOourbuH5jx57EedhTy48fx0cKoZsqXGkoKpPxY8zMhJxISuqxw==}
-    engines: {node: '>=12.4'}
-    peerDependencies:
-      '@tanstack/react-query': '>=5.0.0'
-      react: 17.x || 18.x
-      react-dom: 17.x || 18.x
-      viem: 2.x
-      wagmi: 2.x
-    dependencies:
-      '@tanstack/react-query': 5.17.10(react@18.2.0)
-      buffer: 6.0.3
-      detect-browser: 5.3.0
-      framer-motion: 6.5.1(react-dom@18.2.0)(react@18.2.0)
-      qrcode: 1.5.3
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-transition-state: 1.1.5(react-dom@18.2.0)(react@18.2.0)
-      react-use-measure: 2.1.1(react-dom@18.2.0)(react@18.2.0)
-      resize-observer-polyfill: 1.5.1
-      styled-components: 5.3.11(@babel/core@7.23.7)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
-      viem: 2.0.6(typescript@5.1.6)
-      wagmi: 2.2.0(@tanstack/react-query@5.17.10)(@types/react@17.0.39)(encoding@0.1.13)(immer@9.0.12)(react-dom@18.2.0)(react-native@0.73.2)(react@18.2.0)(typescript@5.1.6)(viem@2.0.6)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - react-is
-    dev: false
-
   /consola@3.2.3:
     resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
@@ -5155,10 +5113,6 @@ packages:
 
   /dayjs@1.11.10:
     resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
-
-  /debounce@1.2.1:
-    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
-    dev: false
 
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -6413,24 +6367,6 @@ packages:
       react: '>=16.8 || ^17.0.0 || ^18.0.0'
       react-dom: '>=16.8 || ^17.0.0 || ^18.0.0'
     dependencies:
-      framesync: 6.0.1
-      hey-listen: 1.0.8
-      popmotion: 11.0.3
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      style-value-types: 5.0.0
-      tslib: 2.6.2
-    optionalDependencies:
-      '@emotion/is-prop-valid': 0.8.8
-    dev: false
-
-  /framer-motion@6.5.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-o1BGqqposwi7cgDrtg0dNONhkmPsUFDaLcKXigzuTFC5x58mE8iyTazxSudFzmT6MEyJKfjjU8ItoMe3W+3fiw==}
-    peerDependencies:
-      react: '>=16.8 || ^17.0.0 || ^18.0.0'
-      react-dom: '>=16.8 || ^17.0.0 || ^18.0.0'
-    dependencies:
-      '@motionone/dom': 10.12.0
       framesync: 6.0.1
       hey-listen: 1.0.8
       popmotion: 11.0.3
@@ -9041,16 +8977,6 @@ packages:
       react: 18.2.0
       react-is: 18.2.0
 
-  /react-transition-state@1.1.5(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-ITY2mZqc2dWG2eitJkYNdcSFW8aKeOlkL2A/vowRrLL8GH3J6Re/SpD/BLvQzrVOTqjsP0b5S9N10vgNNzwMUQ==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
   /react-universal-interface@0.6.2(react@18.2.0)(tslib@2.6.2):
     resolution: {integrity: sha512-dg8yXdcQmvgR13RIlZbTRQOoUrDciFVoSBZILwjE2LFISxZZ8loVJKAkuzswl5js8BHda79bIb2b84ehU8IjXw==}
     peerDependencies:
@@ -9059,17 +8985,6 @@ packages:
     dependencies:
       react: 18.2.0
       tslib: 2.6.2
-    dev: false
-
-  /react-use-measure@2.1.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-nocZhN26cproIiIduswYpV5y5lQpSQS1y/4KuvUCjSKmw7ZWIS/+g3aFnX3WdBkyuGUtTLif3UTqnLLhbDoQig==}
-    peerDependencies:
-      react: '>=16.13'
-      react-dom: '>=16.13'
-    dependencies:
-      debounce: 1.2.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-use@17.5.0(react-dom@18.2.0)(react@18.2.0):

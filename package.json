@@ -15,6 +15,7 @@
     "@types/react": "^17.0.39",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "dnum": "^2.13.1",
     "eslint-config-next": "^14.0.4",
     "framer-motion": "^6.2.8",
     "graphql": "^16.6.0",

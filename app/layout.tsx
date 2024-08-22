@@ -1,8 +1,11 @@
 /* eslint-disable @next/next/no-head-element */
 
 import Navbar from "@/components/navbar";
-import { Web3Provider } from "@/components/web3-provider";
+import Web3ModalProvider from "@/components/web3-provider";
+import { config } from "@/lib/config";
 import { Metadata } from "next";
+import { headers } from "next/headers";
+import { cookieToInitialState } from "wagmi";
 import "../styles/globals.css";
 import "../styles/tailwind.css";
 
@@ -30,16 +33,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const initialState = cookieToInitialState(config, headers().get("cookie"));
+
   return (
     <html>
       <head></head>
       <body>
-        <Web3Provider>
+        <Web3ModalProvider initialState={initialState}>
           <div className="mx-auto">
             <Navbar />
             {children}
           </div>
-        </Web3Provider>
+        </Web3ModalProvider>
       </body>
     </html>
   );

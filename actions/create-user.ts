@@ -7,6 +7,8 @@ export const createUserSchema = z.object({
   name: z.string(),
 });
 
-export const createUserAction = action(createUserSchema, async ({ name }) => {
-  return 0;
-});
+export const createUserAction = action
+  .schema(createUserSchema)
+  .action(async ({ parsedInput: { name } }) => {
+    return 0;
+  });

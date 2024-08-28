@@ -10,14 +10,14 @@
   "dependencies": {
     "@tanstack/react-query": "^5.36.2",
     "@types/node": "^17.0.21",
-    "@types/react": "^17.0.39",
+    "@types/react": "^18.3.4",
     "@web3modal/wagmi": "^5.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "dnum": "^2.13.1",
     "eslint-config-next": "14.2.6",
     "framer-motion": "^6.2.8",
-    "graphql": "^16.6.0",
+    "graphql": "^16.9.0",
     "immer": "^9.0.12",
     "lucide-react": "^0.323.0",
     "next": "14.2.6",
@@ -38,12 +38,14 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
-    "@wagmi/cli": "^1.0.1",
+    "@wagmi/cli": "^2.1.15",
     "autoprefixer": "^10.4.4",
     "encoding": "^0.1.13",
     "eslint": "^8.56.0",
     "eslint-plugin-tailwindcss": "^3.8.0",
     "postcss": "^8.4.12",
-    "tailwindcss": "^3.3.1"
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.10"
   }
 }

@@ -3,28 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@dynamic-labs/ethereum": "^4.2.3",
+    "@dynamic-labs/sdk-react-core": "^4.2.3",
+    "@dynamic-labs/wagmi-connector": "^4.2.3",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@supabase/supabase-js": "^2.47.16",
     "@tanstack/react-query": "^5.36.2",
     "@types/node": "^17.0.21",
-    "@types/react": "^18.3.4",
+    "@types/react": "19.0.7",
     "@web3modal/wagmi": "^5.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "dnum": "^2.13.1",
-    "eslint-config-next": "14.2.6",
+    "eslint-config-next": "15.1.5",
     "framer-motion": "^6.2.8",
-    "graphql": "^16.9.0",
     "immer": "^9.0.12",
     "lucide-react": "^0.323.0",
-    "next": "14.2.6",
+    "next": "15.1.5",
     "next-safe-action": "7.7.1",
     "pino-pretty": "^10.2.3",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-icons": "^4.3.1",
     "swr": "^2.2.4",
     "tailwind-merge": "^1.10.0",
@@ -47,5 +51,8 @@
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "tailwindcss": "^3.4.10"
+  },
+  "resolutions": {
+    "@types/react": "19.0.7"
   }
 }

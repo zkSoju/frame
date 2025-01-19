@@ -1,39 +1,53 @@
-// context/index.tsx
-
 "use client";
 
-import { ReactNode } from "react";
-
-import { createWeb3Modal } from "@web3modal/wagmi/react";
-
+import { EthereumWalletConnectors } from "@dynamic-labs/ethereum";
+import {
+  DynamicContextProvider
+} from "@dynamic-labs/sdk-react-core";
+import { DynamicWagmiConnector } from "@dynamic-labs/wagmi-connector";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { http } from "viem";
+import { berachainTestnetbArtio, mainnet } from "viem/chains";
+import { createConfig, WagmiProvider } from "wagmi";
 
-import { config, projectId } from "@/lib/config";
-import { State, WagmiProvider } from "wagmi";
-
-// Setup queryClient
 const queryClient = new QueryClient();
 
-if (!projectId) throw new Error("Project ID is not defined");
-
-// Create modal
-createWeb3Modal({
-  wagmiConfig: config,
-  projectId,
-  enableAnalytics: true, // Optional - defaults to your Cloud configuration
-  enableOnramp: true, // Optional - false as default
+const config = createConfig({
+  chains: [berachainTestnetbArtio, mainnet],
+  multiInjectedProviderDiscovery: false,
+  transports: {
+    [mainnet.id]: http(),
+    [berachainTestnetbArtio.id]: http(),
+  },
 });
 
-export default function Web3ModalProvider({
-  children,
-  initialState,
-}: {
-  children: ReactNode;
-  initialState?: State;
-}) {
+export default function Web3Provider({ children }: { children: React.ReactNode }) {
+  // return (
+  //   <PrivyProvider appId="clw5emtfa02z92xyp21gry0cw" config={privyConfig}>
+  //     <QueryClientProvider client={queryClient}>
+  //       <WagmiProvider config={config}>{children}</WagmiProvider>
+  //     </QueryClientProvider>
+  //   </PrivyProvider>
+  // );
+
   return (
-    <WagmiProvider config={config} initialState={initialState}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </WagmiProvider>
+    <DynamicContextProvider
+      settings={{
+        // Find your environment id at https://app.dynamic.xyz/dashboard/developer
+        environmentId: process.env.NEXT_PUBLIC_DYNAMIC_ENVIRONMENT_ID!,
+        initialAuthenticationMode: "connect-and-sign",
+        walletConnectors: [
+          // SafeEvmWalletConnectors,
+          EthereumWalletConnectors,
+        ],
+      
+      }}
+    >
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <DynamicWagmiConnector>{children}</DynamicWagmiConnector>
+        </QueryClientProvider>
+      </WagmiProvider>
+    </DynamicContextProvider>
   );
 }

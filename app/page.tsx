@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 export default function Home() {
   return (
     <div>
-      <div className="relative z-10 flex h-screen w-full items-center justify-center bg-gradient-to-b from-black to-gray-900">
+      <div className="relative z-10 flex h-screen w-full items-center justify-center bg-linear-to-b from-black to-gray-900">
         <div className="flex flex-col items-start p-4">
           <p className="mb-6 text-8xl font-medium tracking-tighter text-white">
             frame

@@ -9,6 +9,9 @@ export const createUserSchema = z.object({
 
 export const createUserAction = action
   .schema(createUserSchema)
+  .metadata({
+    name: "create-user",
+  })
   .action(async ({ parsedInput: { name } }) => {
     return 0;
   });

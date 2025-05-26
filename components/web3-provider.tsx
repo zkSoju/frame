@@ -24,14 +24,6 @@ export default function Web3Provider({
 }: {
   children: React.ReactNode;
 }) {
-  // return (
-  //   <PrivyProvider appId="clw5emtfa02z92xyp21gry0cw" config={privyConfig}>
-  //     <QueryClientProvider client={queryClient}>
-  //       <WagmiProvider config={config}>{children}</WagmiProvider>
-  //     </QueryClientProvider>
-  //   </PrivyProvider>
-  // );
-
   return (
     <DynamicContextProvider
       settings={{

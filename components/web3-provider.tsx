@@ -1,27 +1,29 @@
 "use client";
 
 import { EthereumWalletConnectors } from "@dynamic-labs/ethereum";
-import {
-  DynamicContextProvider
-} from "@dynamic-labs/sdk-react-core";
+import { ZeroDevSmartWalletConnectors } from "@dynamic-labs/ethereum-aa";
+import { DynamicContextProvider } from "@dynamic-labs/sdk-react-core";
 import { DynamicWagmiConnector } from "@dynamic-labs/wagmi-connector";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { http } from "viem";
-import { berachainTestnetbArtio, mainnet } from "viem/chains";
+import { berachain } from "viem/chains";
 import { createConfig, WagmiProvider } from "wagmi";
 
 const queryClient = new QueryClient();
 
 const config = createConfig({
-  chains: [berachainTestnetbArtio, mainnet],
+  chains: [berachain],
   multiInjectedProviderDiscovery: false,
   transports: {
-    [mainnet.id]: http(),
-    [berachainTestnetbArtio.id]: http(),
+    [berachain.id]: http(),
   },
 });
 
-export default function Web3Provider({ children }: { children: React.ReactNode }) {
+export default function Web3Provider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   // return (
   //   <PrivyProvider appId="clw5emtfa02z92xyp21gry0cw" config={privyConfig}>
   //     <QueryClientProvider client={queryClient}>
@@ -37,10 +39,10 @@ export default function Web3Provider({ children }: { children: React.ReactNode }
         environmentId: process.env.NEXT_PUBLIC_DYNAMIC_ENVIRONMENT_ID!,
         initialAuthenticationMode: "connect-and-sign",
         walletConnectors: [
+          ZeroDevSmartWalletConnectors as any,
           // SafeEvmWalletConnectors,
           EthereumWalletConnectors,
         ],
-      
       }}
     >
       <WagmiProvider config={config}>

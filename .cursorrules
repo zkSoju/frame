@@ -1,132 +1,49 @@
-# Frame Interface
+You are an expert in TypeScript, Node.js, Next.js App Router, React, Shadcn UI, Radix UI and Tailwind.
 
-Every time you choose to apply a rule(s), explicitly state the rule(s) in the output. You can abbreviate the rule description to a single word or phrase.
+Code Style and Structure
 
-## Project Context
+- Write concise, technical TypeScript code with accurate examples.
+- Use functional and declarative programming patterns; avoid classes.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+- Structure files: exported component, subcomponents, helpers, static content, types.
 
-[Replace this with your project description]
+Naming Conventions
 
-## Code Structure
+- Use lowercase with dashes for directories (e.g., components/auth-wizard).
+- Favor named exports for components.
 
-```
-├── .next/             # Next.js build output
-├── .vscode/          # VS Code configuration
-├── app/              # Next.js app directory
-│   ├── api/         # API routes
-│   ├── (routes)/    # App routes
-│   ├── layout.tsx   # Root layout
-│   └── page.tsx     # Home page
-├── components/       # React components
-│   ├── ui/          # Reusable UI components
-│   └── providers/   # Context providers
-├── lib/             # Shared utilities
-│   ├── hooks/       # Custom React hooks
-│   ├── utils/       # Helper functions
-│   └── config.ts    # App configuration
-├── public/          # Static assets
-├── styles/          # Global styles
-│   ├── globals.css  # Global CSS
-│   └── tailwind.css # Tailwind imports
-├── types/           # TypeScript definitions
-├── actions/         # Server actions
-└── state/          # State management
-```
+TypeScript Usage
 
-## Core Technologies
+- Use TypeScript for all code; prefer interfaces over types.
+- Avoid enums; use maps instead.
+- Use functional components with TypeScript interfaces.
 
-- Framework: Next.js 15+ (App Router)
-- Language: TypeScript
-- Styling: TailwindCSS
-- Components: shadcn/ui
-- Authentication: Dynamic
-- Database: Supabase
-- State Management: Zustand
-- Package Manager: pnpm/npm/yarn
+Syntax and Formatting
 
-## Naming Conventions
+- Use the "function" keyword for pure functions.
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+- Use declarative JSX.
 
-- Use lowercase with dashes for directories (e.g., components/form-wizard)
-- Use PascalCase for component files (e.g., Button.tsx)
-- Use camelCase for utility files (e.g., formatDate.ts)
-- Favor named exports over default exports
-- Use index.ts files for barrel exports
+UI and Styling
 
-## TypeScript Usage
+- Use Shadcn UI, Radix, and Tailwind for components and styling.
+- Implement responsive design with Tailwind CSS; use a mobile-first approach.
 
-- Use TypeScript for all code; prefer interfaces over types
-- Avoid enums; use const objects with 'as const' assertion
-- Use functional components with TypeScript interfaces
-- Define strict types for message passing between different parts of the extension
-- Use absolute imports for all files @/...
-- Avoid try/catch blocks unless there is a good reason to translate or handle error in that abstraction
-- Use explicit return types for all functions
+Performance Optimization
 
-## State Management
+- Minimize 'use client', 'useEffect', and 'setState'; favor React Server Components (RSC).
+- Wrap client components in Suspense with fallback.
+- Use dynamic loading for non-critical components.
+- Optimize images: use WebP format, include size data, implement lazy loading.
 
-- Use Zustand for state management
-- Implement proper cleanup in useEffect hooks
-- Use SWR for fetching data
+Key Conventions
 
+- Use 'nuqs' for URL search parameter state management.
+- Optimize Web Vitals (LCP, CLS, FID).
+- Limit 'use client':
+  - Favor server components and Next.js SSR.
+  - Use only for Web API access in small components.
+  - Avoid for data fetching or state management.
 
-## Tech Stack
-
-- Next.js 15 with App Router
-- Supabase for Database
-- TailwindCSS for Styling
-- TypeScript for Type Safety
-- Viem for Blockchain Interactions
-- Wagmi for Web3 Hooks
-- ShadcnUI for Components
-- PNPM for Package Management
-- Dynamic for Web3/Web2 Authentication
-- Wagmi V2/Viem V2 for Web3 Interactions
-
-## UI Components and Styling
-
-- Modern, Clean Interface Design
-- Responsive Mobile-first Approach
-- Dark/Light Theme Support
-- Interactive Data Visualizations
-- Real-time Updates
-- Optimized Performance
-- Accessible Components
-
-## Security
-
-- Validate all inputs
-- Sanitize user data
-- Implement CORS policies
-- Use environment variables
-- Follow security best practices
-- Regular dependency updates
-
-## Git Usage
-
-Commit Message Prefixes:
-
-- "feat:" for new features
-- "fix:" for bug fixes
-- "perf:" for performance improvements
-- "style:" for styling changes
-- "refactor:" for code refactoring
-- "docs:" for documentation
-- "test:" for testing
-- "chore:" for maintenance
-
-Rules:
-
-- Use descriptive commit messages
-- Keep changes atomic and focused
-- Reference issues when applicable
-- Follow branch naming conventions
-- Review before merging
-
-## Documentation
-
-- Maintain Updated README
-- Document API Endpoints
-- Track Feature Specifications
-- Document State Management
-- Keep Setup Instructions Current
-- Document Dependencies
-
+Follow Next.js docs for Data Fetching, Rendering, and Routing.

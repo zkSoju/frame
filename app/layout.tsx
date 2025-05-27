@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-head-element */
 
 import Navbar from "@/components/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 import Web3Provider from "@/components/web3-provider";
 import { Metadata } from "next";
 import { Geist } from "next/font/google";
@@ -36,17 +37,23 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
-    <html lang="en" className={`${geist.variable}`}>
+    <html lang="en" className={`${geist.className}`}>
       <head></head>
-      <body className={`${geist.variable}`}>
-        <Web3Provider>
-          <div className="mx-auto">
-            <Navbar />
-            {children}
-          </div>
-        </Web3Provider>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Web3Provider>
+            <div className="mx-auto">
+              <Navbar />
+              {children}
+            </div>
+          </Web3Provider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Web3Provider from "@/components/web3-provider";
 import { Metadata } from "next";
 import { Geist } from "next/font/google";
+import localFont from "next/font/local";
 import "../styles/globals.css";
 import "../styles/tailwind.css";
 
@@ -32,13 +33,26 @@ const geist = Geist({
   variable: "--font-geist",
 });
 
+const switzer = localFont({
+  src: "../assets/Switzer.ttf",
+  variable: "--font-switzer",
+});
+
+const clashDisplay = localFont({
+  src: "../assets/ClashDisplay.ttf",
+  variable: "--font-clash-display",
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${geist.className}`}>
+    <html
+      lang="en"
+      className={`${geist.variable} ${switzer.variable} ${clashDisplay.variable}`}
+    >
       <head></head>
       <body>
         <ThemeProvider

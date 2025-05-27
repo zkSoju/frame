@@ -3,8 +3,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-wagmi: Gilroy;
   --font-geist: var(--font-geist);
+  --font-switzer: var(--font-switzer);
+  --font-clash-display: var(--font-clash-display);
 
   --color-border: var(--border);
   --color-input: var(--input);
@@ -215,9 +216,9 @@
 
 @layer base {
   * {
-    @apply border-border font-geist;
+    @apply border-border font-switzer;
   }
   body {
-    @apply bg-linear-to-b from-black to-gray-900;
+    @apply bg-linear-to-b from-black to-[#F4C10B24];
   }
 }

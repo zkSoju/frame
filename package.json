@@ -21,7 +21,7 @@
     "@supabase/supabase-js": "^2.47.16",
     "@tanstack/react-query": "^5.36.2",
     "@types/node": "^17.0.21",
-    "@types/react": "19.1.3",
+    "@types/react": "19.1.8",
     "@upstash/ratelimit": "^2.0.5",
     "@upstash/redis": "^1.34.9",
     "@web3modal/wagmi": "^5.1.1",
@@ -29,13 +29,13 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dnum": "^2.13.1",
-    "eslint-config-next": "15.3.2",
+    "eslint-config-next": "15.4.4",
     "framer-motion": "^6.2.8",
     "immer": "^9.0.12",
     "jsonwebtoken": "^9.0.2",
     "jwks-rsa": "^3.2.0",
     "lucide-react": "^0.508.0",
-    "next": "15.3.2",
+    "next": "15.4.4",
     "next-safe-action": "7.7.1",
     "next-themes": "^0.4.6",
     "pino-pretty": "^10.2.3",
@@ -66,6 +66,6 @@
     "tw-animate-css": "^1.3.0"
   },
   "resolutions": {
-    "@types/react": "19.1.3"
+    "@types/react": "19.1.8"
   }
 }
